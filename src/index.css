@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --app-bg:
+      radial-gradient(circle at top, rgba(82, 196, 157, 0.16), transparent 28%),
+      linear-gradient(180deg, #f6fbff 0%, #eef4fb 48%, #f9fbfd 100%);
+    --text-main: #102031;
+    --text-muted: #5f7088;
+    --text-soft: #8594aa;
+    --surface: rgba(255, 255, 255, 0.82);
+    --surface-strong: #ffffff;
+    --surface-soft: #f4f7fb;
+    --surface-emphasis: #edf7f4;
+    --surface-dark: #112031;
+    --border-line: rgba(217, 227, 240, 0.9);
+    --border-strong: rgba(255, 255, 255, 0.7);
+    --shadow-panel: 0 24px 60px -28px rgba(17, 32, 49, 0.28);
+    --sidebar-bg: rgba(255, 255, 255, 0.84);
+    --sidebar-hover: #eef4fb;
+    --sidebar-active: #112031;
+    --accent: #0f766e;
+    --accent-soft: rgba(15, 118, 110, 0.12);
+    --warning-soft: rgba(255, 186, 73, 0.16);
+    --danger-soft: rgba(244, 97, 126, 0.14);
+    --chart-grid: rgba(95, 112, 136, 0.14);
+    color: var(--text-main);
+    background: var(--app-bg);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.dark {
+    --app-bg:
+      radial-gradient(circle at top, rgba(15, 118, 110, 0.2), transparent 24%),
+      linear-gradient(180deg, #09111d 0%, #0d1624 42%, #121c29 100%);
+    --text-main: #f2f6fb;
+    --text-muted: #a7b5c8;
+    --text-soft: #8090a4;
+    --surface: rgba(14, 22, 35, 0.88);
+    --surface-strong: #121d2d;
+    --surface-soft: #172335;
+    --surface-emphasis: #0f2a29;
+    --surface-dark: #08111d;
+    --border-line: rgba(73, 88, 110, 0.7);
+    --border-strong: rgba(45, 59, 80, 0.9);
+    --shadow-panel: 0 24px 60px -28px rgba(0, 0, 0, 0.55);
+    --sidebar-bg: rgba(10, 17, 29, 0.92);
+    --sidebar-hover: rgba(23, 35, 53, 0.95);
+    --sidebar-active: #f2f6fb;
+    --accent: #39c4af;
+    --accent-soft: rgba(57, 196, 175, 0.14);
+    --warning-soft: rgba(253, 186, 116, 0.12);
+    --danger-soft: rgba(251, 113, 133, 0.14);
+    --chart-grid: rgba(167, 181, 200, 0.12);
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply m-0 min-h-screen font-sans;
+    color: var(--text-main);
+    background: var(--app-bg);
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-3xl border backdrop-blur;
+    background: var(--surface);
+    border-color: var(--border-strong);
+    box-shadow: var(--shadow-panel);
+  }
+
+  .surface-card {
+    background: var(--surface-strong);
+    border-color: var(--border-line);
+  }
+
+  .surface-soft {
+    background: var(--surface-soft);
+  }
+
+  .surface-emphasis {
+    background: var(--surface-emphasis);
+  }
+
+  .surface-dark {
+    background: var(--surface-dark);
+  }
+
+  .border-line {
+    border-color: var(--border-line);
+  }
+
+  .text-main {
+    color: var(--text-main);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .text-soft {
+    color: var(--text-soft);
+  }
+
+  .section-title {
+    @apply text-2xl font-semibold tracking-tight sm:text-3xl;
+    color: var(--text-main);
+  }
+
+  .muted-copy {
+    @apply text-sm leading-6 sm:text-base;
+    color: var(--text-muted);
+  }
+
+  .app-scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .app-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(128, 144, 164, 0.35);
+    border-radius: 999px;
+  }
+}

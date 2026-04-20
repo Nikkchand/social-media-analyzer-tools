@@ -1,0 +1,47 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment and configuration files (critical for security)
+.env*
+!.env.example  # Allow the example file if it's a template without secrets
+
+# Firebase-specific (to avoid committing service accounts or project configs with secrets)
+.firebase/
+.firebaserc  # Often contains project IDs, but ignore to be safe; use .firebaserc.example instead
+
+# Additional build and cache files (common in Vite/Firebase projects)
+.vite/
+.cache/
+.parcel-cache/
+*.tsbuildinfo
+
+# OS-specific files (additional Windows/macOS entries)
+Thumbs.db
+*.swp
+*.swo
+
+# Logs and temporary files (expanding on existing logs section)
+*.log
+logs/
