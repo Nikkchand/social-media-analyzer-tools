@@ -93,4 +93,4 @@ firebase deploy
 ![Graphical](screenshots/Graphical-analytics.png)
 
 ### Reports page
-![Reports](screenshots/repots.png)
+![Reports](screenshots/reports.png)
